@@ -1,17 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
 
 namespace MusicTable
 {
@@ -23,6 +10,29 @@ namespace MusicTable
         public MainWindow()
         {
             InitializeComponent();
+
+            Song song1 = new Song()
+            {
+                IdNumber = "01",
+                SongName = "I want to break free",
+                Album = "The Works",
+                Band = "Queen",
+                Author = "John Deacon",
+                ReleaseDate = "1984",
+                Length = "3:20"
+            };            
+        }
+
+        public class Song
+        {
+            public string IdNumber { get; set; }
+            public string SongName { get; set; }
+            public string Album { get; set; }
+            public string Band { get; set; }
+            public string Author { get; set; }
+            public string ReleaseDate { get; set; }
+            public string Length { get; set; }
+
         }
     }
 }
