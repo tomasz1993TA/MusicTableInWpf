@@ -19,13 +19,13 @@
             </DataGrid.Resources>
             <!-- Column Header Text & Bindings -->
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Id number" Width="150" />
-                <DataGridTextColumn Header="Song name" Width="150" />
-                <DataGridTextColumn Header="Album" Width="150" />
-                <DataGridTextColumn Header="Band" Width="150" />
-                <DataGridTextColumn Header="Author" Width="150" />
-                <DataGridTextColumn Header="Release Date" Width="150" />
-                <DataGridTextColumn Header="Length" Width="*" />                
+                <DataGridTextColumn Header="Id number" Binding="{Binding IdNumber}" Width="150" />
+                <DataGridTextColumn Header="Song name" Binding="{Binding SongName}" Width="150" />
+                <DataGridTextColumn Header="Album" Binding="{Binding Album}" Width="150" />
+                <DataGridTextColumn Header="Band" Binding="{Binding Band}" Width="150" />
+                <DataGridTextColumn Header="Author" Binding="{Binding Author}" Width="150" />
+                <DataGridTextColumn Header="Release Date" Binding="{Binding ReleaseDate}" Width="150" />
+                <DataGridTextColumn Header="Length" Binding="{Binding Length}" Width="*" />                
             </DataGrid.Columns>
         </DataGrid>
     </Grid>
