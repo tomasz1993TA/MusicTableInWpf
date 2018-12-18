@@ -20,7 +20,9 @@ namespace MusicTable
                 Author = "John Deacon",
                 ReleaseDate = "1984",
                 Length = "3:20"
-            };            
+            };
+
+            DataGridXaml.Items.Add(song1);
         }
 
         public class Song
