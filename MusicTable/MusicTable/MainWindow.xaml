@@ -5,8 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MusicTable"
         mc:Ignorable="d"
-        Title="Music Table" Background="DarkGray" Height="350" Width="525">
+        Title="Music Table" Background="DarkGray" Height="350" Width="1100">
     <Grid>
-        
+        <DataGrid x:Name="DataGridXaml" HorizontalAlignment="Left" Height="240" Margin="10,10,0,0" VerticalAlignment="Top" Width="1072">
+            <!-- Font color / Style of Column Headings-->
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background"
+                </Style>
+            </DataGrid.Resources>
+            <!-- Column Header Text & Bindings -->
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id number" Width="150"/>
+                <DataGridTextColumn Header="Song name" Width="150"/>
+                <DataGridTextColumn Header="Album" Width="150"/>
+                <DataGridTextColumn Header="Band" Width="150"/>
+                <DataGridTextColumn Header="Author" Width="150"/>
+                <DataGridTextColumn Header="Release Date" Width="150"/>
+                <DataGridTextColumn Header="Length" Width="*"/>                
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>
