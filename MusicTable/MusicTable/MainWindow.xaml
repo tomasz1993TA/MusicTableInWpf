@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MusicTable"
         mc:Ignorable="d"
-        Title="Music Table" Background="DarkGray" Height="350" Width="1100">
+        Title="Music Table" Background="DarkGray" Height="400" Width="1100">
     <Grid>
         <DataGrid x:Name="DataGridXaml" HorizontalAlignment="Left" Height="240" Margin="10,10,0,0" VerticalAlignment="Top" Width="1072">
             <!-- Font color / Style of Column Headings-->
@@ -28,5 +28,20 @@
                 <DataGridTextColumn Header="Length" Binding="{Binding Length}" Width="*" />                
             </DataGrid.Columns>
         </DataGrid>
+        <Button x:Name="AddNewSongB" Content="Add new song" HorizontalAlignment="Left" Margin="10,255,0,0" VerticalAlignment="Top" Width="144" Height="23" Click="AddNewSongB_Click"/>
+        <TextBox x:Name="IdNumberTB" HorizontalAlignment="Left" Height="23" Margin="10,320,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="SongNameTB" HorizontalAlignment="Left" Height="23" Margin="168,320,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="AlbumTB" HorizontalAlignment="Left" Height="23" Margin="325,320,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="BandTB" HorizontalAlignment="Left" Height="23" Margin="485,320,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="AuthorTB" HorizontalAlignment="Left" Height="23" Margin="643,320,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="ReleaseDateTB" HorizontalAlignment="Left" Height="23" Margin="804,320,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="LengthTB" HorizontalAlignment="Left" Height="23" Margin="962,320,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Id" HorizontalAlignment="Left" Margin="56,294,0,0" VerticalAlignment="Top"/>
+        <Label Content="Song" HorizontalAlignment="Left" Margin="208,294,0,0" VerticalAlignment="Top"/>
+        <Label Content="Album" HorizontalAlignment="Left" Margin="357,294,0,0" VerticalAlignment="Top"/>
+        <Label Content="Band" HorizontalAlignment="Left" Margin="524,294,0,0" VerticalAlignment="Top"/>
+        <Label Content="Author" HorizontalAlignment="Left" Margin="678,294,0,0" VerticalAlignment="Top"/>
+        <Label Content="Release Date" HorizontalAlignment="Left" Margin="824,294,0,0" VerticalAlignment="Top"/>
+        <Label Content="Length" HorizontalAlignment="Left" Margin="995,294,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>
