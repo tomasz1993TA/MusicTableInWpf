@@ -23,6 +23,19 @@ namespace MusicTable
             };
 
             DataGridXaml.Items.Add(song1);
+
+            Song song2 = new Song()
+            {
+                IdNumber = "02",
+                SongName = "We Are the Champions",
+                Album = "News of the World",
+                Band = "Queen",
+                Author = "Freddie Mercury",
+                ReleaseDate = "1977",
+                Length = "2:59"
+            };
+
+            DataGridXaml.Items.Add(song2);
         }
 
         public class Song
