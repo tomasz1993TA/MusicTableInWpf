@@ -11,18 +11,21 @@
             <!-- Font color / Style of Column Headings-->
             <DataGrid.Resources>
                 <Style TargetType="{x:Type DataGridColumnHeader}">
-                    <Setter Property="Background"
+                    <Setter Property="Background" Value="LightGray" />
+                    <Setter Property="FontWeight" Value="SemiBold" />
+                    <Setter Property="BorderThickness" Value="0,0,1,2" />
+                    <Setter Property="BorderBrush" Value="Black" />
                 </Style>
             </DataGrid.Resources>
             <!-- Column Header Text & Bindings -->
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Id number" Width="150"/>
-                <DataGridTextColumn Header="Song name" Width="150"/>
-                <DataGridTextColumn Header="Album" Width="150"/>
-                <DataGridTextColumn Header="Band" Width="150"/>
-                <DataGridTextColumn Header="Author" Width="150"/>
-                <DataGridTextColumn Header="Release Date" Width="150"/>
-                <DataGridTextColumn Header="Length" Width="*"/>                
+                <DataGridTextColumn Header="Id number" Width="150" />
+                <DataGridTextColumn Header="Song name" Width="150" />
+                <DataGridTextColumn Header="Album" Width="150" />
+                <DataGridTextColumn Header="Band" Width="150" />
+                <DataGridTextColumn Header="Author" Width="150" />
+                <DataGridTextColumn Header="Release Date" Width="150" />
+                <DataGridTextColumn Header="Length" Width="*" />                
             </DataGrid.Columns>
         </DataGrid>
     </Grid>
