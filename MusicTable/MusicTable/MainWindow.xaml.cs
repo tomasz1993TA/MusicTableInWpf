@@ -49,5 +49,21 @@ namespace MusicTable
             public string Length { get; set; }
 
         }
+
+        private void AddNewSongB_Click(object sender, RoutedEventArgs e)
+        {
+            Song tempSong = new Song()
+            {
+                IdNumber = IdNumberTB.Text,
+                SongName = SongNameTB.Text,
+                Album = AlbumTB.Text,
+                Band = BandTB.Text,
+                Author = AuthorTB.Text,
+                ReleaseDate = ReleaseDateTB.Text,
+                Length = LengthTB.Text
+            };
+
+            DataGridXaml.Items.Add(tempSong);
+        }
     }
 }
