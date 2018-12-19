@@ -5,30 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MusicTable"
         mc:Ignorable="d"
-        Title="Music Table" Background="DarkGray" Height="400" Width="1100">
+        Title="Music Table" Background="DarkGray" Height="400" Width="1100" Loaded="Window_Loaded">
     <Grid>
-        <DataGrid x:Name="DataGridXaml" HorizontalAlignment="Left" Height="240" Margin="10,10,0,0" VerticalAlignment="Top" Width="1072">
+        <DataGrid x:Name="DataGridXaml" HorizontalAlignment="Left" AutoGenerateColumns="False" Height="240" Margin="10,10,0,0" VerticalAlignment="Top" Width="1072">
             <!-- Font color / Style of Column Headings-->
             <DataGrid.Resources>
                 <Style TargetType="{x:Type DataGridColumnHeader}">
-                    <Setter Property="Background" Value="LightGray" />
-                    <Setter Property="FontWeight" Value="SemiBold" />
-                    <Setter Property="BorderThickness" Value="0,0,1,2" />
-                    <Setter Property="BorderBrush" Value="Black" />
+                    <Setter Property="Background" Value="LightGray"/>
+                    <Setter Property="FontWeight" Value="SemiBold"/>
+                    <Setter Property="BorderThickness" Value="0,0,1,2"/>
+                    <Setter Property="BorderBrush" Value="Black"/>
                 </Style>
             </DataGrid.Resources>
             <!-- Column Header Text & Bindings -->
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Id number" Binding="{Binding IdNumber}" Width="150" />
-                <DataGridTextColumn Header="Song name" Binding="{Binding SongName}" Width="150" />
-                <DataGridTextColumn Header="Album" Binding="{Binding Album}" Width="150" />
-                <DataGridTextColumn Header="Band" Binding="{Binding Band}" Width="150" />
-                <DataGridTextColumn Header="Author" Binding="{Binding Author}" Width="150" />
-                <DataGridTextColumn Header="Release Date" Binding="{Binding ReleaseDate}" Width="150" />
-                <DataGridTextColumn Header="Length" Binding="{Binding Length}" Width="*" />                
+                <DataGridTextColumn Header="Id number" Binding="{Binding IdNumber}" Width="150"/>
+                <DataGridTextColumn Header="Song name" Binding="{Binding SongName}" Width="150"/>
+                <DataGridTextColumn Header="Album" Binding="{Binding Album}" Width="150"/>
+                <DataGridTextColumn Header="Band" Binding="{Binding Band}" Width="150"/>
+                <DataGridTextColumn Header="Author" Binding="{Binding Author}" Width="150"/>
+                <DataGridTextColumn Header="Release Date" Binding="{Binding ReleaseDate}" Width="150"/>
+                <DataGridTextColumn Header="Length" Binding="{Binding Length}" Width="*"/>                    
             </DataGrid.Columns>
         </DataGrid>
         <Button x:Name="AddNewSongB" Content="Add new song" HorizontalAlignment="Left" Margin="10,255,0,0" VerticalAlignment="Top" Width="144" Height="23" Click="AddNewSongB_Click"/>
+        <Button x:Name="ClearTextBoxesB" Content="Clear" HorizontalAlignment="Left" Margin="168,255,0,0" VerticalAlignment="Top" Width="144" Height="23"/>
         <TextBox x:Name="IdNumberTB" HorizontalAlignment="Left" Height="23" Margin="10,320,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="SongNameTB" HorizontalAlignment="Left" Height="23" Margin="168,320,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="AlbumTB" HorizontalAlignment="Left" Height="23" Margin="325,320,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
@@ -42,6 +43,6 @@
         <Label Content="Band" HorizontalAlignment="Left" Margin="524,294,0,0" VerticalAlignment="Top"/>
         <Label Content="Author" HorizontalAlignment="Left" Margin="678,294,0,0" VerticalAlignment="Top"/>
         <Label Content="Release Date" HorizontalAlignment="Left" Margin="824,294,0,0" VerticalAlignment="Top"/>
-        <Label Content="Length" HorizontalAlignment="Left" Margin="995,294,0,0" VerticalAlignment="Top"/>
+        <Label Content="Length" HorizontalAlignment="Left" Margin="995,294,0,0" VerticalAlignment="Top"/>        
     </Grid>
 </Window>
