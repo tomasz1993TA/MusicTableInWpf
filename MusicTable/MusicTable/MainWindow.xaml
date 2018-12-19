@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Music Table" Background="DarkGray" Height="400" Width="1100" Loaded="Window_Loaded">
     <Grid>
-        <DataGrid x:Name="DataGridXaml" HorizontalAlignment="Left" AutoGenerateColumns="False" Height="240" Margin="10,10,0,0" VerticalAlignment="Top" Width="1072">
+        <DataGrid x:Name="DataGridXaml" HorizontalAlignment="Left" AutoGenerateColumns="False" Height="240" Margin="10,10,0,0" VerticalAlignment="Top" Width="1072" SelectionChanged="DataGridXaml_SelectionChanged">
             <!-- Font color / Style of Column Headings-->
             <DataGrid.Resources>
                 <Style TargetType="{x:Type DataGridColumnHeader}">
@@ -19,17 +19,19 @@
             </DataGrid.Resources>
             <!-- Column Header Text & Bindings -->
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Id number" Binding="{Binding IdNumber}" Width="150"/>
-                <DataGridTextColumn Header="Song name" Binding="{Binding SongName}" Width="150"/>
-                <DataGridTextColumn Header="Album" Binding="{Binding Album}" Width="150"/>
-                <DataGridTextColumn Header="Band" Binding="{Binding Band}" Width="150"/>
-                <DataGridTextColumn Header="Author" Binding="{Binding Author}" Width="150"/>
-                <DataGridTextColumn Header="Release Date" Binding="{Binding ReleaseDate}" Width="150"/>
-                <DataGridTextColumn Header="Length" Binding="{Binding Length}" Width="*"/>                    
+                <DataGridTextColumn x:Name="id" Header="Id number" Binding="{Binding IdNumber}" Width="150"/>
+                <DataGridTextColumn x:Name="song" Header="Song name" Binding="{Binding SongName}" Width="150"/>
+                <DataGridTextColumn x:Name="album" Header="Album" Binding="{Binding Album}" Width="150"/>
+                <DataGridTextColumn x:Name="band" Header="Band" Binding="{Binding Band}" Width="150"/>
+                <DataGridTextColumn x:Name="author" Header="Author" Binding="{Binding Author}" Width="150"/>
+                <DataGridTextColumn x:Name="date" Header="Release Date" Binding="{Binding ReleaseDate}" Width="150"/>
+                <DataGridTextColumn x:Name="length" Header="Length" Binding="{Binding Length}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="AddNewSongB" Content="Add new song" HorizontalAlignment="Left" Margin="10,255,0,0" VerticalAlignment="Top" Width="144" Height="23" Click="AddNewSongB_Click"/>
-        <Button x:Name="ClearTextBoxesB" Content="Clear" HorizontalAlignment="Left" Margin="168,255,0,0" VerticalAlignment="Top" Width="144" Height="23"/>
+        <Button x:Name="AddNewSongB" Content="Add" HorizontalAlignment="Left" Margin="10,255,0,0" VerticalAlignment="Top" Width="144" Height="23" Click="AddNewSongB_Click"/>
+        <Button x:Name="ClearTextBoxesB" Content="Clear" HorizontalAlignment="Left" Margin="485,255,0,0" VerticalAlignment="Top" Width="144" Height="23" Click="ClearTextBoxesB_Click"/>
+        <Button x:Name="DeleteB" Content="Delete" HorizontalAlignment="Left" Margin="168,255,0,0" VerticalAlignment="Top" Width="144" Height="23" Click="DeleteB_Click"/>
+        <Button x:Name="EditB" Content="Edit" HorizontalAlignment="Left" Margin="325,255,0,0" VerticalAlignment="Top" Width="144" Height="23" Click="EditB_Click"/>
         <TextBox x:Name="IdNumberTB" HorizontalAlignment="Left" Height="23" Margin="10,320,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="SongNameTB" HorizontalAlignment="Left" Height="23" Margin="168,320,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="AlbumTB" HorizontalAlignment="Left" Height="23" Margin="325,320,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
