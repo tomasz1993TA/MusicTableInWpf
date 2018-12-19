@@ -1,4 +1,8 @@
-﻿using System.Windows;
+﻿using System;
+using System.Data;
+using System.Linq;
+using System.Windows;
+using MusicTable.Models;
 
 namespace MusicTable
 {
@@ -7,63 +11,31 @@ namespace MusicTable
     /// </summary>
     public partial class MainWindow : Window
     {
+        MusicDatabaseEntities db = new MusicDatabaseEntities();
         public MainWindow()
         {
-            InitializeComponent();
-
-            Song song1 = new Song()
-            {
-                IdNumber = "01",
-                SongName = "I want to break free",
-                Album = "The Works",
-                Band = "Queen",
-                Author = "John Deacon",
-                ReleaseDate = "1984",
-                Length = "3:20"
-            };
-
-            DataGridXaml.Items.Add(song1);
-
-            Song song2 = new Song()
-            {
-                IdNumber = "02",
-                SongName = "We Are the Champions",
-                Album = "News of the World",
-                Band = "Queen",
-                Author = "Freddie Mercury",
-                ReleaseDate = "1977",
-                Length = "2:59"
-            };
-
-            DataGridXaml.Items.Add(song2);
+            InitializeComponent();                    
         }
 
-        public class Song
+        private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            public string IdNumber { get; set; }
-            public string SongName { get; set; }
-            public string Album { get; set; }
-            public string Band { get; set; }
-            public string Author { get; set; }
-            public string ReleaseDate { get; set; }
-            public string Length { get; set; }
-
+            DataGridXaml.ItemsSource = db.MusicTable.ToList();
         }
 
         private void AddNewSongB_Click(object sender, RoutedEventArgs e)
         {
-            Song tempSong = new Song()
-            {
-                IdNumber = IdNumberTB.Text,
-                SongName = SongNameTB.Text,
-                Album = AlbumTB.Text,
-                Band = BandTB.Text,
-                Author = AuthorTB.Text,
-                ReleaseDate = ReleaseDateTB.Text,
-                Length = LengthTB.Text
-            };
-
-            DataGridXaml.Items.Add(tempSong);
-        }
+            
+        }             
+        
+        private void ClearTextBoxesB_Click(object sender, RoutedEventArgs e)
+        {
+            IdNumberTB.Text = String.Empty;
+            SongNameTB.Text = String.Empty;
+            AlbumTB.Text = String.Empty;
+            BandTB.Text = String.Empty;
+            AuthorTB.Text = String.Empty;
+            ReleaseDateTB.Text = String.Empty;
+            LengthTB.Text = String.Empty;
+        }               
     }
 }
